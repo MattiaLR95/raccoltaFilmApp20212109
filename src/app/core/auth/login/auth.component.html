@@ -14,8 +14,7 @@
       </span>
       </div>
       <div class="form-floating">
-        <input type="password" name="password" class="form-control" id="inputPassword" [ngModel] placeholder="Password" required #passwordVar="ngModel"
-        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{6,}"
+         <input type="password" name="password" class="form-control" id="inputPassword" [ngModel] placeholder="Password" required #passwordVar="ngModel"
         [ngClass]="{'is-invalid': (passwordVar.touched || passwordVar.dirty) && !passwordVar.valid }">
         <label for="inputPassword">Password</label>
         <span class="invalid-feedback">

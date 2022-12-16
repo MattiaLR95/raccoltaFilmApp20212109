@@ -11,7 +11,7 @@ import { RegistaService } from '../regista.service';
 })
 export class RegistaListComponent implements OnInit {
 
-  registi?: Regista[];
+  registi: Regista[]=[];
   sub?: Subscription;
   confirmMessage: string = '';
 

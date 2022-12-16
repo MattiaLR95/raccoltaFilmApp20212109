@@ -1,3 +1,5 @@
+import { SharedModule } from './../../shared/shared.module';
+import { DecodificaSessoPipe } from './../../shared/pipes/decodifica-sesso.pipe';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -35,6 +37,7 @@ const routes : Routes=[
     CommonModule,
     RouterModule.forChild(routes),
     FormsModule,
+    SharedModule
   ]
 })
 export class RegistaModule { }
