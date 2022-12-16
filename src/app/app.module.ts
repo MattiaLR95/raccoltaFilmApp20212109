@@ -1,3 +1,4 @@
+import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './core/layout/layout.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,7 +8,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './core/layout/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { FooterComponent } from './core/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { FooterComponent } from './core/layout/footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
