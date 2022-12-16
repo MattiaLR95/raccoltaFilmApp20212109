@@ -16,11 +16,13 @@ const routes: Routes = [
   },
   {
     path: 'regista',
-    loadChildren: () => import('./features/regista/regista.module').then(m => m.RegistaModule)
+    loadChildren: () => import('./features/regista/regista.module').then(m => m.RegistaModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'film',
-    loadChildren: () => import('./features/film/film.module').then(m => m.FilmModule)
+    loadChildren: () => import('./features/film/film.module').then(m => m.FilmModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
