@@ -1,9 +1,9 @@
-import { AuthService } from './auth.service';
 import { NgForm } from '@angular/forms';
-import { User } from './../../model/user';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
+import { User } from 'src/app/model/user';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-auth',

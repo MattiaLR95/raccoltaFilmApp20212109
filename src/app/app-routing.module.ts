@@ -1,6 +1,7 @@
+import { AuthGuard } from './core/auth/auth.guard';
 import { WelcomeModule } from './features/welcome/welcome.module';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { WelcomeComponent } from './features/welcome/welcome.component';
 import { FilmCreateComponent } from './features/film/film-create/film-create.component';
 import { RegistaCreateComponent } from './features/regista/regista-create/regista-create.component';
@@ -10,7 +11,8 @@ import { FilmDetailComponent } from './features/film/film-detail/film-detail.com
 const routes: Routes = [
   {
     path: 'welcome',
-    loadChildren: () => import('./features/welcome/welcome.module').then(m => m.WelcomeModule)
+    loadChildren: () => import('./features/welcome/welcome.module').then(m => m.WelcomeModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'regista',
